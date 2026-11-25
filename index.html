@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#210d2d">
+  <meta name="description" content="Monte seu açaí no copo, na garrafa ou na barca e peça pelo WhatsApp.">
+  <title>Açaí dos Deuses | Monte seu açaí</title>
+  <link rel="icon" type="image/png" href="img/logo-acai.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="builder-page">
+  <a class="skip-link" href="#montar">Ir para a montagem</a>
+  <header class="builder-header" id="inicio">
+    <div class="builder-shell builder-header-inner">
+      <a class="brand" href="#inicio">
+        <img src="img/logo-acai.png" alt="" width="525" height="514">
+        <span>Açaí dos Deuses</span>
+      </a>
+      <a class="builder-header-link" href="#recebimento">Entrega e retirada</a>
+      <button class="cart-button" type="button" data-open-cart aria-haspopup="dialog" aria-controls="cart-dialog">
+        <span class="bag-icon" aria-hidden="true"></span>
+        <span>Minha sacola</span>
+        <span class="cart-count" data-cart-count>0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="montar" class="builder-shell builder-main">
+    <header class="builder-title">
+      <h1>Monte seu <em>açaí.</em></h1>
+      <p>Escolha como servir e toque nos seus adicionais favoritos.</p>
+    </header>
+
+    <div class="builder-formats" role="group" aria-label="Formato do açaí">
+      <button type="button" data-format="cup" aria-pressed="true">Copo</button>
+      <button type="button" data-format="bottle" aria-pressed="false">Garrafa</button>
+      <button type="button" data-format="boat" aria-pressed="false">Barca</button>
+    </div>
+
+    <div class="builder-layout">
+      <figure class="builder-stage" data-stage-format="cup">
+        <div class="builder-photo">
+          <div class="builder-art">
+            <img src="img/acai-copo-base.webp" alt="Copo de açaí para personalizar" fetchpriority="high" data-format-photo="cup">
+            <img src="img/acai-puro-espiral.webp" alt="Copo de açaí puro em espiral" data-format-photo="pure" hidden>
+            <img src="img/acai-garrafa.webp" alt="Garrafa de açaí" data-format-photo="bottle" hidden>
+            <img src="img/acai-barca-base.webp" alt="Barca de açaí para personalizar" data-format-photo="boat" hidden>
+            <div class="builder-ingredients" data-stage-ingredients aria-hidden="true"></div>
+            <img class="builder-cup-powder" src="img/acai-ninho-polvilhado.webp" alt="" data-cup-powder hidden>
+            <span class="builder-cup-garnish" data-cup-garnish aria-hidden="true" hidden>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </span>
+          </div>
+        </div>
+        <img src="img/acai-ingredientes.webp" alt="" data-ingredient-sheet hidden>
+        <img src="img/acai-texturas.webp" alt="" data-texture-sheet hidden>
+        <figcaption>
+          <strong data-stage-title>Copo de açaí</strong>
+          <span>Foto ilustrativa</span>
+        </figcaption>
+        <div class="builder-preview-toppings" data-stage-toppings hidden></div>
+      </figure>
+      <section class="builder-controls" aria-labelledby="product-title">
+        <div class="builder-variants" role="group" aria-label="Tipo de copo">
+          <button type="button" data-product="mix-300" aria-pressed="true">Com adicionais</button>
+          <button type="button" data-product="pure-300" aria-pressed="false">Açaí puro</button>
+        </div>
+        <div id="product-content"></div>
+        <noscript><p>Ative o JavaScript para montar o pedido ou faça seu pedido pelo <a href="https://wa.me/5551997259201">WhatsApp</a>.</p></noscript>
+      </section>
+    </div>
+
+    <section class="builder-info" id="recebimento" aria-labelledby="builder-info-title">
+      <h2 id="builder-info-title">Entrega e retirada</h2>
+      <dl class="order-info-details">
+        <div><dt>Entrega</dt><dd><strong data-delivery-price>R$ 9,00</strong></dd></div>
+        <div><dt>Retirada</dt><dd><strong>Sem taxa</strong></dd></div>
+        <div><dt>WhatsApp da loja</dt><dd><a class="order-info-link" data-store-contact href="https://wa.me/5551997259201" target="_blank" rel="noopener noreferrer">(51) 99725-9201</a></dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="builder-footer"><div class="builder-shell"><a class="footer-link" href="#montar">Voltar à montagem</a></div></footer>
+  <button class="cart-float btn btn-yellow" type="button" data-floating-cart data-open-cart aria-haspopup="dialog" aria-controls="cart-dialog" hidden>
+    <span class="bag-icon" aria-hidden="true"></span>
+    <span>Abrir sacola</span>
+    <span class="cart-count" data-cart-count>0</span>
+  </button>
+  <dialog id="cart-dialog" class="shop-dialog" aria-labelledby="cart-title"><div id="cart-content"></div></dialog>
+  <div class="live-status" id="site-status" role="status" aria-live="polite"></div>
+</body>
+</html>
